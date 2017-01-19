@@ -2,12 +2,12 @@
   <div class="mueditor">
     <div class="editor-toolbar">
       <!-- 标题 -->
-      <a title="一级标题" @click="head(1)" class="tool small h1" href="javascript:;"><i class="iconfont">&#xe636;</i></a>
-      <a title="二级标题" @click="head(2)" class="tool small h2" href="javascript:;"><i class="iconfont">&#xe637;</i></a>
-      <a title="三级标题" @click="head(3)" class="tool small h3" href="javascript:;"><i class="iconfont">&#xe639;</i></a>
-      <a title="四级标题" @click="head(4)" class="tool small h4" href="javascript:;"><i class="iconfont">&#xe638;</i></a>
-      <a title="五级标题" @click="head(5)" class="tool small h5" href="javascript:;"><i class="iconfont">&#xe63b;</i></a>
-      <a title="六级标题" @click="head(6)" class="tool small h6" href="javascript:;"><i class="iconfont">&#xe63a;</i></a>
+      <a title="一级标题" @click="head(1)" class="tool small h1" href="javascript:;"><i class="iconfont">&#xe603;</i></a>
+      <a title="二级标题" @click="head(2)" class="tool small h2" href="javascript:;"><i class="iconfont">&#xe604;</i></a>
+      <a title="三级标题" @click="head(3)" class="tool small h3" href="javascript:;"><i class="iconfont">&#xe606;</i></a>
+      <a title="四级标题" @click="head(4)" class="tool small h4" href="javascript:;"><i class="iconfont">&#xe605;</i></a>
+      <a title="五级标题" @click="head(5)" class="tool small h5" href="javascript:;"><i class="iconfont">&#xe608;</i></a>
+      <a title="六级标题" @click="head(6)" class="tool small h6" href="javascript:;"><i class="iconfont">&#xe607;</i></a>
       <!-- 列表 -->
       <a title="无序列表" @click="ul" class="tool" href="javascript:;"><i style="font-size: 1rem" class="iconfont">&#xe62e;</i></a>
       <!-- 换行 -->
