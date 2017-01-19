@@ -149,8 +149,8 @@ export default {
     newline: function () {
       var arr = utils.getSurroundingSelection(this.$refs['editor'])
       var pos = utils.getInputSelection(this.$refs['editor'])['end']
-      this.content = this.$refs['editor'].value = arr[0] + arr[1] + '\n\n' + arr[2]
-      utils.setCaretPosition(this.$refs['editor'], pos + 2)
+      this.content = this.$refs['editor'].value = arr[0] + arr[1] + '  \n' + arr[2]
+      utils.setCaretPosition(this.$refs['editor'], pos + 3)
     },
     // 代码块
     block: function () {
