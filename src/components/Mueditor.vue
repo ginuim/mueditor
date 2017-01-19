@@ -214,33 +214,36 @@ export default {
   background: #FFF;
   border-bottom: #EEE solid 1px;
 }
-.editor-toolbar a {
+.mueditor .editor-toolbar a {
   color: #AEAEAE;
   font-size: 0.875rem;
   border-bottom: none !important;
 }
-.editor-toolbar a:hover {
+.mueditor .editor-toolbar a:hover {
   color: #999;
 }
-.editor-toolbar i {
+.mueditor .editor-toolbar i {
   font-style: normal !important;
 }
-.editor-toolbar .tool {
+.mueditor .editor-toolbar .tool {
   margin-left: 0.2rem;
   border-radius: 3px;
   padding: 0.3rem 0.5rem;
 }
-.editor-toolbar .tool:hover {
+.mueditor .editor-toolbar .split {
+  color: #EEE;
+}
+.mueditor .editor-toolbar .tool:hover {
   background: #EEE;
 }
-.editor-toolbar .small i {
+.mueditor .editor-toolbar .small i {
   font-size: 0.75rem;
 }
-.editor-toolbar .btn-img-upload {
+.mueditor .editor-toolbar .btn-img-upload {
   position: relative;
   margin-left: 0.5rem;
 }
-.editor-toolbar .btn-img-upload input {
+.mueditor .editor-toolbar .btn-img-upload input {
   position: absolute;
   top: 0;
   left: 0;
