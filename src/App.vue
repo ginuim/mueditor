@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <h1 class="logo"></h1>
+    <div class="publish-box">
+      <Mueditor :sync-content="syncPreview" :default-content="defaultContent"></Mueditor>
+      <div class="" v-html="html"></div>
+    </div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Mueditor from './components/Mueditor'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Mueditor
+  },
+  data: function () {
+    return {
+      defaultContent: '# Mueditor \n  A simple [Vue2.x](http://vuejs.org) markdown editor',
+      html: ''
+    }
+  },
+  methods: {
+    // 从发布框实时同步内容到模拟 FeedData
+    syncPreview: function (data) {
+      this.html = data.html
+    }
   }
 }
 </script>
@@ -24,5 +39,23 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-image: url('./assets/imgs/logo-green.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.publish-box {
+  width: 40rem;
+  margin: 0 auto;
+}
+@media all and (max-width: 768px) {
+  .publish-box {
+    width: 100%;
+  }
 }
 </style>
