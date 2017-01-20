@@ -13,12 +13,12 @@
       <!-- 换行 -->
       <a title="换行" @click="newline" class="tool small" href="javascript:;"><i class="iconfont">&#xe6af;</i></a>
       <!-- 代码块 -->
-      <a title="代码块" @click="block" class="tool" href="javascript:;"><i class="iconfont">&#xe65f;</i></a>
+      <a title="代码块" @click="block" class="tool block" href="javascript:;"><i class="iconfont">&#xe65f;</i></a>
       <!-- 超链接 -->
-      <a title="超链接" @click="link" class="tool" href="javascript:;"><i class="iconfont">&#xe634;</i></a>
+      <a title="超链接" @click="link" class="tool link" href="javascript:;"><i class="iconfont">&#xe634;</i></a>
       <span class="split">|</span>
       <!-- 上传图片 -->
-      <a title="上传图片" class="tool btn-img-upload" href="javascript:;">
+      <a title="上传图片" class="tool upload-img" href="javascript:;">
         <span v-if="!uploading">
           <input ref="file" accept="image/png,image/gif,image/jpeg,image/svg+xml" @change="browserFile" type="file" />
           <i class="iconfont" style="font-size: 1rem;">&#xe70e;</i>
@@ -75,6 +75,7 @@ export default {
     clearEditor: function () {
       this.content = ''
     },
+
     // 浏览本地图片
     browserFile: function () {
       try {
@@ -88,6 +89,7 @@ export default {
       } catch (err) {
       }
     },
+
     // 如果是发布了文集则替换正文中的文章链接
     replaceLink: function () {
       if (this.type === 'essay' && this.data && this.data.title) {
@@ -99,6 +101,7 @@ export default {
         }
       }
     },
+
     // 设置 n 级标题
     head: function (n) {
       var h = ''
@@ -127,6 +130,7 @@ export default {
       }
       utils.setCaretPosition(this.$refs['editor'], pos + delta + n + 1)
     },
+
     // 设置无序列表
     ul: function () {
       var arr = utils.getSurroundingSelection(this.$refs['editor'])
@@ -145,6 +149,7 @@ export default {
       this.content = this.$refs['editor'].value = content + arr[2]
       utils.setCaretPosition(this.$refs['editor'], pos + delta)
     },
+
     // 换行
     newline: function () {
       var arr = utils.getSurroundingSelection(this.$refs['editor'])
@@ -152,6 +157,7 @@ export default {
       this.content = this.$refs['editor'].value = arr[0] + arr[1] + '  \n' + arr[2]
       utils.setCaretPosition(this.$refs['editor'], pos + 3)
     },
+
     // 代码块
     block: function () {
       var arr = utils.getSurroundingSelection(this.$refs['editor'])
@@ -159,6 +165,7 @@ export default {
       this.content = this.$refs['editor'].value = arr[0] + '\n```\n' + arr[1] + '\n```' + arr[2]
       utils.setCaretPosition(this.$refs['editor'], pos + 5)
     },
+
     // 添加超链接
     link: function () {
       var arr = utils.getSurroundingSelection(this.$refs['editor'])
@@ -166,6 +173,7 @@ export default {
       this.content = this.$refs['editor'].value = arr[0] + '[' + arr[1].replace(/\n/g, '') + '](link)' + arr[2]
       utils.setCaretPosition(this.$refs['editor'], pos + 7)
     },
+
     // 重新计算编辑器尺寸
     editorResize: function () {
       var self = this
@@ -206,44 +214,55 @@ export default {
   min-width: 20rem;
   box-shadow: 0 0 4px rgba(7,40,107,0.2);
 }
+
 .mueditor .editor-toolbar {
   width: calc(100% - 2rem);
   padding: 0 1rem;
   height: 4rem;
   line-height: 4rem;
   background: #FFF;
+  text-align: left;
   border-bottom: #EEE solid 1px;
 }
+
 .mueditor .editor-toolbar a {
   color: #AEAEAE;
   font-size: 0.875rem;
   border-bottom: none !important;
 }
+
 .mueditor .editor-toolbar a:hover {
-  color: #999;
+  color: #333;
 }
+
 .mueditor .editor-toolbar i {
   font-style: normal !important;
 }
+
 .mueditor .editor-toolbar .tool {
   margin-left: 0.2rem;
   border-radius: 3px;
   padding: 0.3rem 0.5rem;
 }
+
 .mueditor .editor-toolbar .split {
   color: #EEE;
 }
+
 .mueditor .editor-toolbar .tool:hover {
   background: #EEE;
 }
+
 .mueditor .editor-toolbar .small i {
   font-size: 0.75rem;
 }
-.mueditor .editor-toolbar .btn-img-upload {
+
+.mueditor .editor-toolbar .upload-img {
   position: relative;
   margin-left: 0.5rem;
 }
-.mueditor .editor-toolbar .btn-img-upload input {
+
+.mueditor .editor-toolbar .upload-img input {
   position: absolute;
   top: 0;
   left: 0;
@@ -253,11 +272,14 @@ export default {
   cursor: pointer;
   display: block;
 }
+
 .mueditor .editor-content {
   width: 100%;
   background: #FFF;
 }
+
 .mueditor .editor-content textarea {
+  outline: none;
   width: calc(100% - 4rem);
   min-height: 9rem;
   padding: 1rem 2rem;
@@ -267,6 +289,7 @@ export default {
   overflow: hidden;
   line-height: 1.5rem;
 }
+
 .mueditor .editor-control {
   width: 100%;
   padding: 1.5rem 0;
@@ -275,7 +298,8 @@ export default {
 @media all and (max-width: 768px) {
   .editor-toolbar .h4,
   .editor-toolbar .h5,
-  .editor-toolbar .h6 {
+  .editor-toolbar .h6,
+  .editor-toolbar .block {
     display: none;
   }
 }

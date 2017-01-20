@@ -18,7 +18,7 @@ export default {
   },
   data: function () {
     return {
-      defaultContent: '# Mueditor \n  A simple [Vue2.x](http://vuejs.org) markdown editor',
+      defaultContent: '# Mueditor \n  A simple [Vue](http://vuejs.org)2.x markdown editor\n\n- simple\n- fast\n- lightweight',
       html: ''
     }
   },
@@ -45,7 +45,7 @@ export default {
   height: 5rem;
   margin: 0 auto;
   margin-bottom: 2rem;
-  background-image: url('./assets/imgs/logo-green.png');
+  background-image: url('./assets/imgs/logo-pink.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
