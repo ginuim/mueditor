@@ -1,13 +1,13 @@
 <template>
   <div class="mueditor">
-    <div class="editor-toolbar">
+    <div class="mueditor-toolbar">
       <!-- 标题 -->
-      <a title="一级标题" @click="head(1)" class="tool small h1" href="javascript:;"><i class="iconfont">&#xe603;</i></a>
-      <a title="二级标题" @click="head(2)" class="tool small h2" href="javascript:;"><i class="iconfont">&#xe604;</i></a>
-      <a title="三级标题" @click="head(3)" class="tool small h3" href="javascript:;"><i class="iconfont">&#xe606;</i></a>
-      <a title="四级标题" @click="head(4)" class="tool small h4" href="javascript:;"><i class="iconfont">&#xe605;</i></a>
-      <a title="五级标题" @click="head(5)" class="tool small h5" href="javascript:;"><i class="iconfont">&#xe608;</i></a>
-      <a title="六级标题" @click="head(6)" class="tool small h6" href="javascript:;"><i class="iconfont">&#xe607;</i></a>
+      <a title="Heading 1" @click="head(1)" class="tool small h1" href="javascript:;"><i class="iconfont">&#xe603;</i></a>
+      <a title="Heading 2" @click="head(2)" class="tool small h2" href="javascript:;"><i class="iconfont">&#xe604;</i></a>
+      <a title="Heading 3" @click="head(3)" class="tool small h3" href="javascript:;"><i class="iconfont">&#xe606;</i></a>
+      <a title="Heading 4" @click="head(4)" class="tool small h4" href="javascript:;"><i class="iconfont">&#xe605;</i></a>
+      <a title="Heading 5" @click="head(5)" class="tool small h5" href="javascript:;"><i class="iconfont">&#xe608;</i></a>
+      <a title="Heading 6" @click="head(6)" class="tool small h6" href="javascript:;"><i class="iconfont">&#xe607;</i></a>
       <!-- 列表 -->
       <a title="无序列表" @click="ul" class="tool" href="javascript:;"><i style="font-size: 1rem" class="iconfont">&#xe62e;</i></a>
       <!-- 换行 -->
@@ -212,10 +212,10 @@ export default {
 .mueditor {
   width: 100%;
   min-width: 20rem;
-  box-shadow: 0 0 4px rgba(7,40,107,0.2);
+  box-shadow: 0 0 4px rgba(7, 40, 107, 0.2);
 }
 
-.mueditor .editor-toolbar {
+.mueditor .mueditor-toolbar {
   width: calc(100% - 2rem);
   padding: 0 1rem;
   height: 4rem;
@@ -225,44 +225,50 @@ export default {
   border-bottom: #EEE solid 1px;
 }
 
-.mueditor .editor-toolbar a {
+.mueditor .mueditor-toolbar a {
   color: #AEAEAE;
   font-size: 0.875rem;
   border-bottom: none !important;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.45s ease-out 0s;
+  -moz-transition: all 0.45s ease-out 0s;
+  transition: all 0.45s ease-out 0s;
 }
 
-.mueditor .editor-toolbar a:hover {
+.mueditor .mueditor-toolbar a:hover {
   color: #333;
 }
 
-.mueditor .editor-toolbar i {
+.mueditor .mueditor-toolbar i {
   font-style: normal !important;
 }
 
-.mueditor .editor-toolbar .tool {
+.mueditor .mueditor-toolbar .tool {
   margin-left: 0.2rem;
   border-radius: 3px;
   padding: 0.3rem 0.5rem;
 }
 
-.mueditor .editor-toolbar .split {
+.mueditor .mueditor-toolbar .split {
   color: #EEE;
 }
 
-.mueditor .editor-toolbar .tool:hover {
+.mueditor .mueditor-toolbar .tool:hover {
   background: #EEE;
 }
 
-.mueditor .editor-toolbar .small i {
+.mueditor .mueditor-toolbar .small i {
   font-size: 0.75rem;
 }
 
-.mueditor .editor-toolbar .upload-img {
+.mueditor .mueditor-toolbar .upload-img {
   position: relative;
   margin-left: 0.5rem;
 }
 
-.mueditor .editor-toolbar .upload-img input {
+.mueditor .mueditor-toolbar .upload-img input {
   position: absolute;
   top: 0;
   left: 0;
@@ -288,6 +294,7 @@ export default {
   font-size: 1rem;
   overflow: hidden;
   line-height: 1.5rem;
+  font-family: monospace, monospace;
 }
 
 .mueditor .editor-control {
@@ -296,10 +303,10 @@ export default {
 }
 
 @media all and (max-width: 768px) {
-  .editor-toolbar .h4,
-  .editor-toolbar .h5,
-  .editor-toolbar .h6,
-  .editor-toolbar .block {
+  .mueditor-toolbar .h4,
+  .mueditor-toolbar .h5,
+  .mueditor-toolbar .h6,
+  .mueditor-toolbar .block {
     display: none;
   }
 }

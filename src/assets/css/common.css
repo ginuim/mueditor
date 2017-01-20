@@ -1,8 +1,10 @@
 a {
   text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: color 0.25s ease-out 0s;
-  -moz-transition: color 0.25s ease-out 0s;
-  transition: color 0.25s ease-out 0s;
+}
+a:link,
+a:visited {
+  color: #146FB4;
+}
+a:hover {
+  color: #43A8F3;
 }
