@@ -2,33 +2,33 @@
   <div class="mueditor">
     <div class="mueditor-toolbar">
       <!-- 标题 -->
-      <a title="Heading 1" @click="head(1)" class="tool small h1" href="javascript:;"><i class="iconfont">&#xe603;</i></a>
-      <a title="Heading 2" @click="head(2)" class="tool small h2" href="javascript:;"><i class="iconfont">&#xe604;</i></a>
-      <a title="Heading 3" @click="head(3)" class="tool small h3" href="javascript:;"><i class="iconfont">&#xe606;</i></a>
-      <a title="Heading 4" @click="head(4)" class="tool small h4" href="javascript:;"><i class="iconfont">&#xe605;</i></a>
-      <a title="Heading 5" @click="head(5)" class="tool small h5" href="javascript:;"><i class="iconfont">&#xe608;</i></a>
-      <a title="Heading 6" @click="head(6)" class="tool small h6" href="javascript:;"><i class="iconfont">&#xe607;</i></a>
+      <a title="Heading 1" @click="head(1)" class="tool small h1" href="javascript:;"><i class="muefont">&#xe603;</i></a>
+      <a title="Heading 2" @click="head(2)" class="tool small h2" href="javascript:;"><i class="muefont">&#xe604;</i></a>
+      <a title="Heading 3" @click="head(3)" class="tool small h3" href="javascript:;"><i class="muefont">&#xe606;</i></a>
+      <a title="Heading 4" @click="head(4)" class="tool small h4" href="javascript:;"><i class="muefont">&#xe605;</i></a>
+      <a title="Heading 5" @click="head(5)" class="tool small h5" href="javascript:;"><i class="muefont">&#xe608;</i></a>
+      <a title="Heading 6" @click="head(6)" class="tool small h6" href="javascript:;"><i class="muefont">&#xe607;</i></a>
       <!-- 列表 -->
-      <a title="无序列表" @click="ul" class="tool" href="javascript:;"><i style="font-size: 1rem" class="iconfont">&#xe62e;</i></a>
+      <a title="无序列表" @click="ul" class="tool" href="javascript:;"><i style="font-size: 1rem" class="muefont">&#xe62e;</i></a>
       <!-- 换行 -->
-      <a title="换行" @click="newline" class="tool small" href="javascript:;"><i class="iconfont">&#xe6af;</i></a>
+      <a title="换行" @click="newline" class="tool small" href="javascript:;"><i class="muefont">&#xe6af;</i></a>
       <!-- 代码块 -->
-      <a title="代码块" @click="block" class="tool block" href="javascript:;"><i class="iconfont">&#xe65f;</i></a>
+      <a title="代码块" @click="block" class="tool block" href="javascript:;"><i class="muefont">&#xe65f;</i></a>
       <!-- 超链接 -->
-      <a title="超链接" @click="link" class="tool link" href="javascript:;"><i class="iconfont">&#xe634;</i></a>
+      <a title="超链接" @click="link" class="tool link" href="javascript:;"><i class="muefont">&#xe634;</i></a>
       <span class="split">|</span>
       <!-- 上传图片 -->
       <a title="上传图片" class="tool upload-img" href="javascript:;">
         <span v-if="!uploading">
           <input ref="file" accept="image/png,image/gif,image/jpeg,image/svg+xml" @change="browserFile" type="file" />
-          <i class="iconfont" style="font-size: 1rem;">&#xe70e;</i>
+          <i class="muefont" style="font-size: 1rem;">&#xe70e;</i>
         </span>
-        <span style="display: inline-block;" v-else><i class="iconfont i-loading">&#xe63c;</i></span>
+        <span style="display: inline-block;" v-else><i class="muefont i-loading">&#xe63c;</i></span>
       </a>
       <span class="split">|</span>
       <!-- 帮助 -->
       <a title="语法帮助" target="_blank" class="tool help" href="//zhijia.io/essay/104178">
-        <i class="iconfont">&#xe628;</i>
+        <i class="muefont">&#xe628;</i>
       </a>
     </div>
     <div class="editor-content">

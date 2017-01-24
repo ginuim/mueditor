@@ -8,16 +8,16 @@
 
     <style type="text/css">
 
-        @font-face {font-family: "iconfont";
+        @font-face {font-family: "muefont";
           src: url('iconfont.eot'); /* IE9*/
           src: url('iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
           url('iconfont.woff') format('woff'), /* chrome, firefox */
           url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-          url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+          url('iconfont.svg#muefont') format('svg'); /* iOS 4.1- */
         }
 
-        .iconfont {
-          font-family:"iconfont" !important;
+        .muefont {
+          font-family:"muefont" !important;
           font-size:16px;
           font-style:normal;
           -webkit-font-smoothing: antialiased;
@@ -33,81 +33,93 @@
         <ul class="icon_lists clear">
             
                 <li>
-                <i class="icon iconfont">&#xe62e;</i>
+                <i class="icon muefont">&#xe62e;</i>
                     <div class="name">目录</div>
                     <div class="code">&amp;#xe62e;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe65f;</i>
+                <i class="icon muefont">&#xe65f;</i>
                     <div class="name">code</div>
                     <div class="code">&amp;#xe65f;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe634;</i>
+                <i class="icon muefont">&#xe634;</i>
                     <div class="name">链接</div>
                     <div class="code">&amp;#xe634;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe628;</i>
+                <i class="icon muefont">&#xe628;</i>
                     <div class="name">问号</div>
                     <div class="code">&amp;#xe628;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe6af;</i>
+                <i class="icon muefont">&#xe6af;</i>
                     <div class="name">web-diy-文本换行</div>
                     <div class="code">&amp;#xe6af;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe70e;</i>
+                <i class="icon muefont">&#xe70e;</i>
                     <div class="name">image</div>
                     <div class="code">&amp;#xe70e;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe603;</i>
+                <i class="icon muefont">&#xe635;</i>
+                    <div class="name">有序列表</div>
+                    <div class="code">&amp;#xe635;</div>
+                </li>
+            
+                <li>
+                <i class="icon muefont">&#xe603;</i>
                     <div class="name">h1</div>
                     <div class="code">&amp;#xe603;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe604;</i>
+                <i class="icon muefont">&#xe604;</i>
                     <div class="name">h2</div>
                     <div class="code">&amp;#xe604;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe605;</i>
+                <i class="icon muefont">&#xe605;</i>
                     <div class="name">h4</div>
                     <div class="code">&amp;#xe605;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe606;</i>
+                <i class="icon muefont">&#xe606;</i>
                     <div class="name">h3</div>
                     <div class="code">&amp;#xe606;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe607;</i>
+                <i class="icon muefont">&#xe607;</i>
                     <div class="name">h6</div>
                     <div class="code">&amp;#xe607;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe608;</i>
+                <i class="icon muefont">&#xe608;</i>
                     <div class="name">h5</div>
                     <div class="code">&amp;#xe608;</div>
                 </li>
             
                 <li>
-                <i class="icon iconfont">&#xe609;</i>
+                <i class="icon muefont">&#xe609;</i>
                     <div class="name">loading</div>
                     <div class="code">&amp;#xe609;</div>
+                </li>
+            
+                <li>
+                <i class="icon muefont">&#xe60a;</i>
+                    <div class="name">ol</div>
+                    <div class="code">&amp;#xe60a;</div>
                 </li>
             
         </ul>
@@ -126,17 +138,17 @@
         <p>unicode使用步骤如下：</p>
         <h3 id="-font-face">第一步：拷贝项目下面生成的font-face</h3>
         <pre><code class="lang-js hljs javascript">@font-face {
-  font-family: <span class="hljs-string">'iconfont'</span>;
+  font-family: <span class="hljs-string">'muefont'</span>;
   src: url(<span class="hljs-string">'iconfont.eot'</span>);
   src: url(<span class="hljs-string">'iconfont.eot?#iefix'</span>) format(<span class="hljs-string">'embedded-opentype'</span>),
   url(<span class="hljs-string">'iconfont.woff'</span>) format(<span class="hljs-string">'woff'</span>),
   url(<span class="hljs-string">'iconfont.ttf'</span>) format(<span class="hljs-string">'truetype'</span>),
-  url(<span class="hljs-string">'iconfont.svg#iconfont'</span>) format(<span class="hljs-string">'svg'</span>);
+  url(<span class="hljs-string">'iconfont.svg#muefont'</span>) format(<span class="hljs-string">'svg'</span>);
 }
 </code></pre>
         <h3 id="-iconfont-">第二步：定义使用iconfont的样式</h3>
-        <pre><code class="lang-js hljs javascript">.iconfont{
-  font-family:<span class="hljs-string">"iconfont"</span> !important;
+        <pre><code class="lang-js hljs javascript">.muefont{
+  font-family:<span class="hljs-string">"muefont"</span> !important;
   font-size:<span class="hljs-number">16</span>px;font-style:normal;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: <span class="hljs-number">0.2</span>px;
@@ -144,10 +156,10 @@
 }
 </code></pre>
         <h3 id="-">第三步：挑选相应图标并获取字体编码，应用于页面</h3>
-        <pre><code class="lang-js hljs javascript">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"iconfont"</span>&gt;&amp;#x33;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span></code></pre>
+        <pre><code class="lang-js hljs javascript">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"muefont"</span>&gt;&amp;#x33;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span></code></pre>
 
         <blockquote>
-        <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
+        <p>"muefont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
         </blockquote>
     </div>
 
