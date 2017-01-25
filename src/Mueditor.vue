@@ -174,6 +174,7 @@ export default {
     }
   },
   methods: {
+    name: 'Mueditor',
     // 清空编辑器内容
     clearEditor: function () {
       this.content = ''

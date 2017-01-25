@@ -5,11 +5,14 @@ A ***simple*** [Vue](http://vuejs.org)2.x **markdown** editor
 - simple
 - lightweight
 
-## install
+# Links
+[live demo](http://mueditor.reaidea.com)
+
+## Install
 
 > npm install mueditor
 
-## how to use
+## Quick Start
 
 ```
 <template>

@@ -1,6 +1,6 @@
 {
   "name": "mueditor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple vue2.x markdown editor",
   "author": "ginuim@gmail.com",
   "private": false,
