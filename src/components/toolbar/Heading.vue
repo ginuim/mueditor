@@ -1,7 +1,7 @@
 <template>
   <a :title="'Heading ' + step"
     @click="clickHandler"
-    :class="['tool', 'small', 'h' + step]"
+    :class="['h' + step]"
     href="javascript:;"
     >
     <i :class="['icon', 'muefont', 'icon-mue-h' + step]"></i>

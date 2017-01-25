@@ -1,10 +1,12 @@
 <template>
-  <a title="upload image" class="tool upload-img" href="javascript:;">
-    <span v-if="!uploading">
+  <a title="upload image" class="upload-img" href="javascript:;">
+    <span v-if="uploading">
       <input ref="file" accept="image/png,image/gif,image/jpeg,image/svg+xml" @change="browserFile" type="file" />
-      <i class="muefont" style="font-size: 1rem;">&#xe70e;</i>
+      <i :class="['icon', 'muefont', 'icon-mue-image']"></i>
     </span>
-    <span style="display: inline-block;" v-else><i class="muefont i-loading">&#xe63c;</i></span>
+    <span style="display: inline-block;" v-else>
+      <i :class="['icon', 'muefont', 'icon-mue-loading']"></i>
+    </span>
   </a>
 </template>
 

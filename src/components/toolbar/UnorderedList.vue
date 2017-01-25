@@ -1,7 +1,6 @@
 <template>
   <a title="unordered list"
     @click="clickHandler"
-    :class="['tool']"
     href="javascript:;"
     >
     <i :class="['icon', 'muefont', 'icon-mue-ul']"></i>

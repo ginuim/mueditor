@@ -1,6 +1,6 @@
 <template>
   <div class="mueditor">
-    <div class="mueditor-toolbar">
+    <div class="mueditor-toolbar clearfix">
       <!-- Heading -->
       <tool-heading
         v-for="i in headings"
@@ -11,6 +11,24 @@
         :set-content="setContent"
         >
       </tool-heading>
+      <!-- Bold -->
+      <tool-bold
+        :selection="selection"
+        :caret-pos="caretPos"
+        :set-caret-position="setCaretPosition"
+        :set-text-selected="setTextSelected"
+        :set-content="setContent"
+        >
+      </tool-bold>
+      <!-- Italic -->
+      <tool-italic
+        :selection="selection"
+        :caret-pos="caretPos"
+        :set-caret-position="setCaretPosition"
+        :set-text-selected="setTextSelected"
+        :set-content="setContent"
+        >
+      </tool-italic>
       <!-- Unordered list -->
       <tool-unordered-list
         :selection="selection"
@@ -246,6 +264,7 @@ export default {
 }
 
 .mueditor .mueditor-toolbar a {
+  float: left;
   color: #AEAEAE;
   font-size: 0.875rem;
   border-bottom: none !important;
@@ -255,6 +274,15 @@ export default {
   -webkit-transition: all 0.45s ease-out 0s;
   -moz-transition: all 0.45s ease-out 0s;
   transition: all 0.45s ease-out 0s;
+  margin-left: 0.2rem;
+  border-radius: 3px;
+  /*padding: 0.3rem 0.5rem;*/
+  width: 2rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.25rem;
 }
 
 .mueditor .mueditor-toolbar a:hover {
@@ -263,12 +291,6 @@ export default {
 
 .mueditor .mueditor-toolbar i {
   font-style: normal !important;
-}
-
-.mueditor .mueditor-toolbar .tool {
-  margin-left: 0.2rem;
-  border-radius: 3px;
-  padding: 0.3rem 0.5rem;
 }
 
 .mueditor .mueditor-toolbar .split {

@@ -1,7 +1,6 @@
 <template>
   <a title="Help"
     @click="clickHandler"
-    :class="['tool']"
     href="javascript:;"
     >
     <i :class="['icon', 'muefont', 'icon-mue-help']"></i>
