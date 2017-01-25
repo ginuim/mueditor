@@ -50,4 +50,20 @@ export default {
 </script>
 
 <style>
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-mue-loading {
+  animation: rotating 1s linear infinite;
+  transform-origin:51% 49%; display: block;
+}
 </style>

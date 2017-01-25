@@ -287,6 +287,7 @@ export default {
 
 .mueditor .mueditor-toolbar a:hover {
   color: #333;
+  background: #EEE;
 }
 
 .mueditor .mueditor-toolbar i {
@@ -294,6 +295,9 @@ export default {
 }
 
 .mueditor .mueditor-toolbar .split {
+  float: left;
+  margin-top: 1.25rem;
+  line-height: 1.75rem;
   color: #EEE;
 }
 
@@ -307,7 +311,7 @@ export default {
 
 .mueditor .mueditor-toolbar .upload-img {
   position: relative;
-  margin-left: 0.5rem;
+  margin: 1.25rem 0.5rem 0 0.5rem;
 }
 
 .mueditor .mueditor-toolbar .upload-img input {
