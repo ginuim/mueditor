@@ -2,14 +2,19 @@
   <div id="app">
     <h1 class="logo"></h1>
     <div class="publish-box">
-      <Mueditor :sync-content="syncPreview" :default-content="defaultContent"></Mueditor>
+      <Mueditor
+        :sync-content="syncPreview"
+        :default-content="defaultContent"
+        local-storage-name="mue"
+        >
+      </Mueditor>
       <div class="publish-preview" v-html="html"></div>
     </div>
   </div>
 </template>
 
 <script>
-import Mueditor from './components/Mueditor'
+import Mueditor from './Mueditor'
 
 export default {
   name: 'app',

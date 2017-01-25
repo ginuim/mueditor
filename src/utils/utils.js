@@ -107,9 +107,24 @@ function setCaretPosition (el, caretPos) {
   }
 }
 
+// 选中 textarea 某段文字
+function setTextSelected (el, start, end) {
+  if (el.setSelectionRange) {
+    el.setSelectionRange(start, end)
+  } else if (el.createTextRange) {
+    var range = el.createTextRange()
+    range.collapse(true)
+    range.moveStart('character', start)
+    range.moveEnd('character', end - start - 1)
+    range.select()
+  }
+  el.focus()
+}
+
 export default {
   getInputSelection,
   getSurroundingSelection,
   insertAtCaret,
-  setCaretPosition
+  setCaretPosition,
+  setTextSelected
 }
