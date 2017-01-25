@@ -1,10 +1,10 @@
 
 @font-face {font-family: "muefont";
-  src: url('iconfont.eot?t=1485318370806'); /* IE9*/
-  src: url('iconfont.eot?t=1485318370806#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1485318370806') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1485318370806') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1485318370806#muefont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1485322464717'); /* IE9*/
+  src: url('iconfont.eot?t=1485322464717#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1485322464717') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1485322464717') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1485322464717#muefont') format('svg'); /* iOS 4.1- */
 }
 
 .muefont {
@@ -22,6 +22,10 @@
 .icon-mue-link:before { content: "\e634"; }
 
 .icon-mue-bold:before { content: "\e638"; }
+
+.icon-mue-quote:before { content: "\e637"; }
+
+.icon-mue-quote1:before { content: "\e868"; }
 
 .icon-mue-italic:before { content: "\eb31"; }
 

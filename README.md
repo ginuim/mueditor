@@ -1,24 +1,46 @@
-# mueditor
+# Mueditor
+A ***simple*** [Vue](http://vuejs.org)2.x **markdown** editor
 
-> A simple vue2.x markdown editor
+- fast
+- simple
+- lightweight
 
-## Build Setup
+## install
 
-``` bash
-# install dependencies
-npm install
+> npm install mueditor
 
-# serve with hot reload at localhost:8080
-npm run dev
+## how to use
 
-# build for production with minification
-npm run build
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
+<template>
+  <div class="publish-box">
+      <Mueditor
+        :sync-content="syncPreview"
+        :default-content="defaultContent"
+        local-storage-name="mue"
+        >
+      </Mueditor>
+      <div class="publish-preview" v-html="html"></div>
+    </div>
+</template>
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+<script>
+import Mueditor from './Mueditor'
+export default {
+  components: {
+    Mueditor
+  },
+  data: function () {
+    return {
+      defaultContent: 'Mueditor demo',
+      html: ''
+    }
+  },
+  methods: {
+    syncPreview: function (data) {
+      this.html = data.html
+    }
+  }
+}
+</script>
+```

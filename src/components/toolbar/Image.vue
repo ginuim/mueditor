@@ -28,7 +28,6 @@ export default {
   },
   mounted: function () {
     var self = this
-    console.log(this.insertAtCaret)
     this.fileReader = new window.FileReader()
     this.fileReader.onload = function (event) {
       self.insertAtCaret('\n![](' + event.target.result + ')\n')

@@ -45,6 +45,15 @@
         :set-content="setContent"
         >
       </tool-enter>
+      <!-- Block quote -->
+      <tool-block-quote
+        :selection="selection"
+        :caret-pos="caretPos"
+        :set-caret-position="setCaretPosition"
+        :set-text-selected="setTextSelected"
+        :set-content="setContent"
+        >
+      </tool-block-quote>
       <!-- Code block -->
       <tool-code-block
         :selection="selection"
@@ -87,7 +96,12 @@
       </tool-help>
     </div>
     <div class="editor-content">
-      <textarea ref="editor" @click="textareActive" @keydown="textareActive" v-model="content"></textarea>
+      <textarea ref="editor"
+        @click="textareActive"
+        @keydown="textareActive"
+        v-model="content"
+        >
+      </textarea>
     </div>
   </div>
 </template>
@@ -99,7 +113,7 @@ import ToolHeading from './components/toolbar/Heading.vue'
 import ToolBold from './components/toolbar/Bold.vue'
 import ToolItalic from './components/toolbar/Italic.vue'
 import ToolCodeBlock from './components/toolbar/CodeBlock.vue'
-import ToolBlockquote from './components/toolbar/Blockquote.vue'
+import ToolBlockQuote from './components/toolbar/Blockquote.vue'
 import ToolImage from './components/toolbar/Image.vue'
 import ToolLink from './components/toolbar/Link.vue'
 import ToolEnter from './components/toolbar/Enter.vue'
@@ -120,7 +134,7 @@ export default {
     ToolBold,
     ToolItalic,
     ToolCodeBlock,
-    ToolBlockquote,
+    ToolBlockQuote,
     ToolImage,
     ToolLink,
     ToolEnter,
