@@ -43,4 +43,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.publish-box {
+  width: 40rem;
+  margin: 0 auto;
+}
+.publish-preview {
+  font-family: monospace, monospace;
+}
+@media all and (max-width: 768px) {
+  .publish-box {
+    width: 100%;
+  }
+}
+</style>
 ```
