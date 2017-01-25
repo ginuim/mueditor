@@ -15,7 +15,8 @@ export default {
     'step',
     'setContent',
     'setCaretPosition',
-    'setTextSelected'
+    'setTextSelected',
+    'insertAtCaret'
   ],
   mounted: function () {
   },

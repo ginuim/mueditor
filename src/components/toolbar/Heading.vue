@@ -10,7 +10,15 @@
 
 <script>
 export default {
-  props: ['selection', 'caretPos', 'step', 'setContent', 'setCaretPosition'],
+  props: [
+    'selection',
+    'caretPos',
+    'step',
+    'setContent',
+    'setCaretPosition',
+    'setTextSelected',
+    'insertAtCaret'
+  ],
   mounted: function () {
   },
   methods: {

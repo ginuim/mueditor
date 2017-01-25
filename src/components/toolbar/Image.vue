@@ -1,6 +1,6 @@
 <template>
   <a title="upload image" class="upload-img" href="javascript:;">
-    <span v-if="uploading">
+    <span v-if="!uploading">
       <input ref="file" accept="image/png,image/gif,image/jpeg,image/svg+xml" @change="browserFile" type="file" />
       <i :class="['icon', 'muefont', 'icon-mue-image']"></i>
     </span>
@@ -12,7 +12,15 @@
 
 <script>
 export default {
-  props: ['selection', 'caretPos', 'step', 'setContent', 'setCaretPosition', 'insertAtCaret'],
+  props: [
+    'selection',
+    'caretPos',
+    'step',
+    'setContent',
+    'setCaretPosition',
+    'setTextSelected',
+    'insertAtCaret'
+  ],
   data: function () {
     return {
       uploading: false
@@ -20,16 +28,18 @@ export default {
   },
   mounted: function () {
     var self = this
+    console.log(this.insertAtCaret)
     this.fileReader = new window.FileReader()
     this.fileReader.onload = function (event) {
-      self.$post('zhijia/file/upload/base64', { filefield: event.target.result, flag: 1 }, function (res) {
-        self.uploading = false
-        if (res.data.success && res.data.file_path) {
-          self.insertAtCaret('\n![](' + res.data.file_path + ')\n')
-        } else {
-          self.$error(res.data)
-        }
-      })
+      self.insertAtCaret('\n![](' + event.target.result + ')\n')
+      // self.$post('zhijia/file/upload/base64', { filefield: event.target.result }, function (res) {
+      //   self.uploading = false
+      //   if (res.data.success && res.data.file_path) {
+      //     self.insertAtCaret('\n![](' + res.data.file_path + ')\n')
+      //   } else {
+      //     self.$error(res.data)
+      //   }
+      // })
     }
   },
   methods: {

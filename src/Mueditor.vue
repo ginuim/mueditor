@@ -301,14 +301,6 @@ export default {
   color: #EEE;
 }
 
-.mueditor .mueditor-toolbar .tool:hover {
-  background: #EEE;
-}
-
-.mueditor .mueditor-toolbar .small i {
-  font-size: 0.75rem;
-}
-
 .mueditor .mueditor-toolbar .upload-img {
   position: relative;
   margin: 1.25rem 0.5rem 0 0.5rem;
