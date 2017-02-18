@@ -1,19 +1,26 @@
 {
   "name": "mueditor",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "A simple vue2.x markdown editor",
   "author": "ginuim@gmail.com",
+  "main": "lib/mueditor.common.js",
   "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
+    "publish": "webpack --config webpack.publish.js",
+    "dist": "cooking build -c build/cooking.common.js -p",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs"
   },
   "dependencies": {
+    "cooking": "^1.5.0",
+    "cooking-lint": "^0.1.4",
+    "cooking-vue2": "^0.3.0",
     "marked": "^0.3.6",
-    "vue": "^2.1.0"
+    "vue": "^2.1.0",
+    "webpack-node-externals": "^1.5.4"
   },
   "repository": {
     "type": "git",

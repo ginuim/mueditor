@@ -28,7 +28,7 @@ A ***simple*** [Vue](http://vuejs.org)2.x **markdown** editor
 </template>
 
 <script>
-import Mueditor from './Mueditor'
+import Mueditor from 'mueditor'
 export default {
   components: {
     Mueditor

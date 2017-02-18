@@ -1,7 +1,19 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var nodeExternals = require('webpack-node-externals')
+var externals = {}
 
 module.exports = {
+  jsexclude: /node_modules/,
+  alias: {
+    main: path.resolve(__dirname, '../src'),
+    'vue$': 'vue/dist/vue.common.js',
+    'vue2': 'vue/dist/vue.common.js',
+    'mueditor': path.resolve(__dirname, '../')
+  },
+  externals: [Object.assign({
+    vue: 'vue'
+  }, externals), nodeExternals()],
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
