@@ -1,64 +1,21 @@
-# Mueditor
-A ***simple*** [Vue](http://vuejs.org)2.x **markdown** editor
+# mue
 
-- fast
-- simple
-- lightweight
+> A Vue.js project
 
-# Links
-[live demo](http://mueditor.reaidea.com)
+## Build Setup
 
-## Install
+``` bash
+# install dependencies
+npm install
 
-> npm install mueditor
+# serve with hot reload at localhost:8080
+npm run dev
 
-## Quick Start
+# build for production with minification
+npm run build
 
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
-<template>
-  <div class="publish-box">
-      <Mueditor
-        :sync-content="syncPreview"
-        :default-content="defaultContent"
-        local-storage-name="mue"
-        >
-      </Mueditor>
-      <div class="publish-preview" v-html="html"></div>
-    </div>
-</template>
 
-<script>
-import Mueditor from 'mueditor'
-export default {
-  components: {
-    Mueditor
-  },
-  data: function () {
-    return {
-      defaultContent: 'Mueditor demo',
-      html: ''
-    }
-  },
-  methods: {
-    syncPreview: function (data) {
-      this.html = data.html
-    }
-  }
-}
-</script>
-
-<style>
-.publish-box {
-  width: 40rem;
-  margin: 0 auto;
-}
-.publish-preview {
-  font-family: monospace, monospace;
-}
-@media all and (max-width: 768px) {
-  .publish-box {
-    width: 100%;
-  }
-}
-</style>
-```
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

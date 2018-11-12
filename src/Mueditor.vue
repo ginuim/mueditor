@@ -3,7 +3,8 @@
     <div class="mueditor-toolbar clearfix">
       <!-- Heading -->
       <tool-heading
-        v-for="i in headings"
+        v-for="(i, index) in headings"
+        :key="index"
         :step="i"
         :selection="selection"
         :caret-pos="caretPos"
